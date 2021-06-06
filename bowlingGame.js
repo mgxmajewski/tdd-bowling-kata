@@ -1,9 +1,9 @@
-new class BowlingGame {
-    constructor() {
-        this.score = score
-    }
+class BowlingGame {
 
     getScore(){
-        return -1
+        return 1
     }
 }
+
+module.exports = {BowlingGame}
+
