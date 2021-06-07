@@ -6,9 +6,9 @@ describe('BowlingGame', () => {
         Game = new BowlingGame()
     });
 
-    test('should score one when rolled one', () => {
+    test('should score one when no rolls', () => {
         let result = Game.getScore()
-        expect(result).toEqual(1);
+        expect(result).toEqual(0);
     });
 })
 
