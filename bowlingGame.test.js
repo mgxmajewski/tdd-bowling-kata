@@ -6,9 +6,15 @@ describe('BowlingGame', () => {
         Game = new BowlingGame()
     });
 
-    test('should score one when no rolls', () => {
+    test('should score zero when no rolls', () => {
         let result = Game.getScore()
         expect(result).toEqual(0);
+    });
+
+    test('should score one when no rolled one', () => {
+        Game.roll(1)
+        let result = Game.getScore()
+        expect(result).toEqual(1);
     });
 })
 
