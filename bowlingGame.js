@@ -1,7 +1,15 @@
 class BowlingGame {
+    constructor() {
+        this.score = 0
+    }
+
 
     getScore(){
-        return 0
+        return this.score
+    }
+
+    roll(points) {
+        this.score+=points
     }
 }
 
