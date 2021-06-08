@@ -17,12 +17,22 @@ describe('BowlingGame', () => {
         expect(result).toEqual(1);
     });
 
-    test('should score twenty when rolled twenty times', () => {
-        for (let i = 0; i< 20; i++){
-            Game.roll(1)
+    function roll(throws, pins) {
+        for (let i = 0; i < throws; i++) {
+            Game.roll(pins)
         }
+    }
+
+    test('should score twenty when rolled twenty times', () => {
+        roll(20, 1);
         let result = Game.getScore()
         expect(result).toEqual(20)
+    });
+
+    test('should score zero when rolled twenty times', () => {
+        roll(20, 0)
+        let result = Game.getScore()
+        expect(result).toEqual(0)
     });
 })
 
