@@ -16,8 +16,8 @@ class BowlingGame {
         this.score += rolls
     }
 
-    allRolls(...args) {
-        this.allRollsArr = Array.from(args)
+    allRolls(...bowlRolls) {
+        this.allRollsArr = Array.from(bowlRolls)
     }
 }
 

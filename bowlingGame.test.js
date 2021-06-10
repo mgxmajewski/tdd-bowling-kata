@@ -42,9 +42,7 @@ describe('BowlingGame', () => {
     });
 
     test('should score spare', () => {
-        roll(2, 5)
-        roll(1, 4)
-        roll(17, 0)
+        Game.allRolls(5,5,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
         let result = Game.getScore()
         expect(result).toEqual(18)
     });
