@@ -34,5 +34,19 @@ describe('BowlingGame', () => {
         let result = Game.getScore()
         expect(result).toEqual(0)
     });
+
+    test('should create array with all rolls', () => {
+        Game.allRolls(1, 2, 3, 4, 5)
+        let result = Game.getAllRollsArr()
+        expect(result).toEqual([1,2,3,4,5])
+    });
+
+    test('should score spare', () => {
+        roll(2, 5)
+        roll(1, 4)
+        roll(17, 0)
+        let result = Game.getScore()
+        expect(result).toEqual(18)
+    });
 })
 

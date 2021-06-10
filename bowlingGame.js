@@ -1,15 +1,23 @@
 class BowlingGame {
     constructor() {
         this.score = 0
+        this.allRollsArr = []
     }
 
-
-    getScore(){
+    getScore() {
         return this.score
     }
 
-    roll(points) {
-        this.score+=points
+    getAllRollsArr() {
+        return this.allRollsArr
+    }
+
+    roll(rolls) {
+        this.score += rolls
+    }
+
+    allRolls(...args) {
+        this.allRollsArr = Array.from(args)
     }
 }
 
