@@ -43,7 +43,7 @@ describe('BowlingGame', () => {
 
     test('should score spare', () => {
         Game.allRolls(5,5,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
-        let result = Game.getScore()
+        let result = Game.getScoreFromArray()
         expect(result).toEqual(18)
     });
 })

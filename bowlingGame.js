@@ -8,6 +8,11 @@ class BowlingGame {
         return this.score
     }
 
+    getScoreFromArray() {
+        this.getAllRollsArr().forEach(bowlThrow => this.score += bowlThrow)
+        return this.score
+    }
+
     getAllRollsArr() {
         return this.allRollsArr
     }
