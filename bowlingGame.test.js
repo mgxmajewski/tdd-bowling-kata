@@ -46,5 +46,12 @@ describe('BowlingGame', () => {
         let result = Game.getScoreFromArray()
         expect(result).toEqual(18)
     });
+
+    test('should validate spare',  () => {
+        Game.allRolls(5,5)
+        let rollsArray = Game.getAllRollsArr()
+        let result = Game.checkForSpare(rollsArray)
+        expect(result).toBe(true)
+    });
 })
 
