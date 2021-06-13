@@ -49,8 +49,7 @@ describe('BowlingGame', () => {
 
     test('should validate spare',  () => {
         Game.allRolls(5,5)
-        let rollsArray = Game.getAllRollsArr()
-        let result = Game.checkForSpare(rollsArray)
+        let result = Game.checkForSpare(5,5)
         expect(result).toBe(true)
     });
 })

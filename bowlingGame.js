@@ -8,8 +8,13 @@ class BowlingGame {
         return this.score
     }
 
+    checkForSpare(bowlThrow, nextThrow) {
+        return bowlThrow + nextThrow === 10;
+    }
+
     getScoreFromArray() {
-        this.getAllRollsArr().forEach(bowlThrow => this.score += bowlThrow)
+        this.getAllRollsArr().forEach(bowlThrow =>
+            this.score += bowlThrow)
         return this.score
     }
 
