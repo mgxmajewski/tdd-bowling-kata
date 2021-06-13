@@ -13,9 +13,17 @@ class BowlingGame {
     }
 
     getScoreFromArray() {
-        this.getAllRollsArr().forEach(bowlThrow =>
-            this.score += bowlThrow)
-        return this.score
+        let tempScore = 0;
+        let bowlThrows = this.getAllRollsArr()
+        for (let i = 0; i <= bowlThrows.length; i+=2) {
+            if (this.checkForSpare(bowlThrows[i], bowlThrows[i+1])){
+                tempScore += 10 + bowlThrows[i+2]
+            } else if (i+1  <= bowlThrows.length){
+                tempScore += bowlThrows[i] + bowlThrows[i+1]
+            }
+        }
+        console.log(tempScore)
+        return tempScore
     }
 
     getAllRollsArr() {
