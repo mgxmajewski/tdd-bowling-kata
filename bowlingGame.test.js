@@ -55,8 +55,14 @@ describe('BowlingGame', () => {
 
     test('should validate strike',  () => {
         Game.allRolls(0,10)
-        let result = Game.checkForStrike(5,5)
+        let result = Game.checkForStrike(0,10)
         expect(result).toBe(true)
+    });
+
+    test('should score strike', () => {
+        Game.allRolls(0,10,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+        let result = Game.getScoreFromArray()
+        expect(result).toEqual(26)
     });
 })
 
