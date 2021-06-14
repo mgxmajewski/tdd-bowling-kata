@@ -42,14 +42,20 @@ describe('BowlingGame', () => {
     });
 
     test('should score spare', () => {
-        Game.allRolls(5,5,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+        Game.allRolls(5,5,4,0,6,4,3,0,0,6,9,0,0,0,0,0,0,0,0,0)
         let result = Game.getScoreFromArray()
-        expect(result).toEqual(18)
+        expect(result).toEqual(49)
     });
 
     test('should validate spare',  () => {
         Game.allRolls(5,5)
         let result = Game.checkForSpare(5,5)
+        expect(result).toBe(true)
+    });
+
+    test('should validate strike',  () => {
+        Game.allRolls(0,10)
+        let result = Game.checkForStrike(5,5)
         expect(result).toBe(true)
     });
 })
