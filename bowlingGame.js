@@ -12,6 +12,10 @@ class BowlingGame {
         return bowlThrow + nextThrow === 10;
     }
 
+    checkForStrike(bowlThrow, nextThrow) {
+        return bowlThrow === 10 || nextThrow === 10;
+    }
+
     getScoreFromArray() {
         let tempScore = 0;
         let bowlThrows = this.getAllRollsArr()
