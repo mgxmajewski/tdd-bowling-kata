@@ -7,25 +7,25 @@ describe('BowlingGame', () => {
     });
 
     test('should score zero when no rolls', () => {
-        let result = Game.getScore()
+        let result = Game.getScoreFromArray()
         expect(result).toEqual(0);
     });
 
     test('should score one when no rolled one', () => {
-        Game.roll(1)
-        let result = Game.getScore()
+        Game.allRolls(1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+        let result = Game.getScoreFromArray()
         expect(result).toEqual(1);
     });
 
     test('should score twenty when rolled twenty times', () => {
-        roll(20, 1);
-        let result = Game.getScore()
+        Game.allRolls(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
+        let result = Game.getScoreFromArray()
         expect(result).toEqual(20)
     });
 
     test('should score zero when rolled twenty times', () => {
-        roll(20, 0)
-        let result = Game.getScore()
+        Game.allRolls(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+        let result = Game.getScoreFromArray()
         expect(result).toEqual(0)
     });
 
