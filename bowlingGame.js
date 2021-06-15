@@ -36,10 +36,6 @@ class BowlingGame {
         return this.allRollsArr
     }
 
-    roll(rolls) {
-        this.score += rolls
-    }
-
     allRolls(...bowlRolls) {
         this.allRollsArr = Array.from(bowlRolls)
     }
