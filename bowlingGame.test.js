@@ -17,6 +17,12 @@ describe('BowlingGame', () => {
         expect(result).toEqual(1);
     });
 
+    test('should score ninety when rolled ten nines and ten zeroes', () => {
+        Game.allRolls(9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0)
+        let result = Game.getScoreFromArray()
+        expect(result).toEqual(90);
+    });
+
     test('should score twenty when rolled twenty times', () => {
         Game.allRolls(1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1)
         let result = Game.getScoreFromArray()
