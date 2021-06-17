@@ -1,11 +1,6 @@
 class BowlingGame {
     constructor() {
-        this.score = 0
         this.allRollsArr = []
-    }
-
-    getScore() {
-        return this.score
     }
 
     checkForSpare(bowlThrow, nextThrow) {
