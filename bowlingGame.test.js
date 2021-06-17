@@ -18,9 +18,9 @@ describe('BowlingGame', () => {
     });
 
     test('should score hundred fifty when rolled 10 pairs of 5 and spare, with a final 5', () => {
-        Game.allRolls(5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5,0,5)
+        Game.allRolls(5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5)
         let result = Game.getScoreFromArray()
-        expect(result).toEqual(90);
+        expect(result).toEqual(150);
     });
 
     test('should score ninety when rolled ten nines and ten zeroes', () => {
