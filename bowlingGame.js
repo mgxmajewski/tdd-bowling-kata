@@ -11,7 +11,7 @@ class BowlingGame {
         return bowlThrow === 10 || nextThrow === 10;
     }
 
-    getScoreFromArray() {
+    get ScoreFromArray() {
         let tempScore = 0;
         let bowlThrows = this.getAllRollsArr()
         let bowlThrowsLen = bowlThrows.length-2
